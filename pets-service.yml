@@ -22,7 +22,3 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
-
----
-owner-service:
-  url: http://owner-service

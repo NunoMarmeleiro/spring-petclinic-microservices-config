@@ -89,3 +89,11 @@ spring:
       schema-locations: classpath*:db/mysql/schema.sql
       data-locations: classpath*:db/mysql/data.sql
       mode: ALWAYS
+
+#KAFKA
+---
+
+kafka:
+  config:
+    bootstrap: localhost:9092
+    consumer-group: kafka-group
