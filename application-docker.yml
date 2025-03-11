@@ -2,5 +2,5 @@
 
 kafka:
   config:
-    bootstrap: http://kafka-service:9092
+    bootstrap: http://kafka-server:9092
     consumer-group: kafka-group
