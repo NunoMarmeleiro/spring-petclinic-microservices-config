@@ -1,0 +1,6 @@
+# COMMON APPLICATION PROPERTIES DOCKER
+
+kafka:
+  config:
+    bootstrap: kafka-service:9092
+    consumer-group: kafka-group
