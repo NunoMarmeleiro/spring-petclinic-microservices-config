@@ -97,5 +97,3 @@ kafka:
   config:
     bootstrap: localhost:9092
     consumer-group: kafka-group
-
-spring.datasource.hikari.maximum-pool-size: 30
