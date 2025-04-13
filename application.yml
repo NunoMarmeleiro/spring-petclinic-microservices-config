@@ -6,6 +6,13 @@ server:
   # The stop processing uses a timeout which provides a grace period during which existing requests will be allowed to complete but no new requests will be permitted
   shutdown: graceful
 
+#KAFKA
+---
+kafka:
+  config:
+    bootstrap: localhost:9092
+    consumer-group: kafka-group
+
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
   sql:
@@ -57,13 +64,6 @@ management:
   tracing:
     sampling:
       probability: 1
-
-#KAFKA
----
-kafka:
-  config:
-    bootstrap: localhost:9092
-    consumer-group: kafka-group
 
 # Chaos Engineering
 ---
