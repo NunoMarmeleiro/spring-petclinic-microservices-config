@@ -90,6 +90,12 @@ spring:
       data-locations: classpath*:db/mysql/data.sql
       mode: ALWAYS
 
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 30
+
 #KAFKA
 ---
 
