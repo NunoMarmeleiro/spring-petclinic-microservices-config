@@ -1,9 +1,0 @@
-# COMMON APPLICATION PROPERTIES DOCKER
-spring:
-  config:
-    activate:
-      on-profile: docker
-kafka:
-  config:
-    bootstrap: kafka-server:9092
-    consumer-group: kafka-group
