@@ -12,14 +12,7 @@ kafka:
   config:
     bootstrap: localhost:9092
     consumer-group: kafka-group
-spring:
-  config:
-    activate:
-      on-profile: docker
-kafka:
-  config:
-    bootstrap: kafka-server:9092
-    consumer-group: kafka-group
+
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
