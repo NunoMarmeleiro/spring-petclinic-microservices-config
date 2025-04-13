@@ -1,4 +1,8 @@
 # COMMON APPLICATION PROPERTIES DOCKER
+spring:
+  config:
+    activate:
+      on-profile: docker
 
 kafka:
   config:
