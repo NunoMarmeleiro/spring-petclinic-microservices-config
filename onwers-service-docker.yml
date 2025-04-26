@@ -1,4 +1,0 @@
-kafka:
-  config:
-    bootstrap: kafka-server:9092
-    consumer-group: kafka-group
