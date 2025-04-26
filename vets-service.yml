@@ -26,7 +26,6 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: vets-service:${spring.application.instance_id:${random.value}}
 management:
   zipkin:
     tracing:
