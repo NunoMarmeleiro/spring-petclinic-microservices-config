@@ -1,41 +1,12 @@
-spring:
-  cloud:
-    gateway:
-      default-filters:
-        - name: CircuitBreaker
-          args:
-            name: defaultCircuitBreaker
-            fallbackUri: forward:/fallback
-        - name: Retry
-          args:
-            retries: 1
-            statuses: SERVICE_UNAVAILABLE
-            methods: POST
-      routes:
-        - id: vets-service
-          uri: lb://vets-service
-          predicates:
-            - Path=/api/vet/**
-          filters:
-            - StripPrefix=2
-        - id: visits-service
-          uri: lb://visits-service
-          predicates:
-            - Path=/api/visit/**
-          filters:
-            - StripPrefix=2
-        - id: owners-service
-          uri: lb://owners-service
-          predicates:
-            - Path=/api/owner/**
-          filters:
-            - StripPrefix=2
-        - id: pets-service
-          uri: lb://pets-service
-          predicates:
-            - Path=/api/pet/**
-          filters:
-            - StripPrefix=2
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    vets-service: /vet/**
+    visits-service: /visit/**
+    owners-service: /owner/**
+    pets-service: /pets/**
+    api-gateway: /gateway/**
 
 server:
   port: 8080
