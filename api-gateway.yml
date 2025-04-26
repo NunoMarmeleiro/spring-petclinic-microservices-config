@@ -2,10 +2,19 @@ zuul:
   prefix: /api
   ignoredServices: '*'
   routes:
-    vets-service: /vet/**
-    visits-service: /visit/**
-    owners-service: /owner/**
-    pets-service: /pets/**
+    vets-service: 
+      path: /vet/**
+      url: http://vets-service:8083
+    visits-service: 
+      path: /visit/**
+      url: http://visits-service:8082
+    owners-service: 
+      path: /owner/**
+      url: http://owners-service:8085
+    pets-service: 
+      path: /pet/**
+      url: http://pets-service:8086
+
     api-gateway: /gateway/**
 
 server:
@@ -14,6 +23,12 @@ server:
     enabled: true
     mime-types: application/json,text/css,application/javascript
     min-response-size: 2048
+
+logging:
+  level:
+    org.springframework.cloud.netflix.zuul: DEBUG
+    org.springframework.web.client.RestTemplate: DEBUG
+
 
 # Internationalization
 spring.messages.basename: messages/messages
