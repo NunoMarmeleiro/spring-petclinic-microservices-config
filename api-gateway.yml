@@ -4,7 +4,7 @@ zuul:
   routes:
     vets-service: /vet/**
     visits-service: /visit/**
-    owners-service: /owners/**
+    owners-service: /owner/**
     pets-service: /pets/**
     api-gateway: /gateway/**
 
